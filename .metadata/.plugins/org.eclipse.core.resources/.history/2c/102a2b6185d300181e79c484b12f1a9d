@@ -1,0 +1,58 @@
+package com.oracle.cn.ptqa.selenium1019.testcase;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+
+import com.oracle.cn.ptqa.selenium1019.base.BaseTestCase;
+import com.oracle.cn.ptqa.selenium1019.pageobject.LoginPage;
+
+public class PersonalInfoTest extends BaseTestCase {
+
+	@Test
+	public void test() throws InterruptedException {
+
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.open();
+		loginPage.inputUserName("peixuefei");
+		loginPage.inputPasswrod("123456");
+		loginPage.clickLoginButton();
+
+		// click account setting
+//		Thread.sleep(5000);
+		driver.findElement(By.linkText("账号设置")).click();
+
+		// click personal info
+//		driver.findElement(By.linkText("个人资料")).click();
+		driver.findElement(By.partialLinkText("个人资料")).click();
+		// modify name
+//		Thread.sleep(3000);
+		driver.findElement(By.id("true_name")).clear();
+		driver.findElement(By.id("true_name")).sendKeys("裴大");
+
+		// modify gender
+		driver.findElement(By.cssSelector("[value='1']")).click();
+
+		// modify birthday
+		String js = "document.getElementById(\"date\").removeAttribute(\"readonly\")";
+		((JavascriptExecutor) driver).executeScript(js);
+		driver.findElement(By.id("date")).clear();
+		driver.findElement(By.id("date")).sendKeys("1980-01-01");
+
+		// modify QQ
+		driver.findElement(By.id("qq")).clear();
+		driver.findElement(By.id("qq")).sendKeys("12345678");
+
+		// submit change, using any element in form can submit
+		driver.findElement(By.id("qq")).submit();
+
+		// click OK in pop-up
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+
+//		fail("Not yet implemented"); // TODO
+	}
+
+}

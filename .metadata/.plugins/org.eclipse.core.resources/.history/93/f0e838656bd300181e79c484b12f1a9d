@@ -1,0 +1,33 @@
+package com.oracle.cn.ptqa.selenium1019.testcase;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+
+import com.oracle.cn.ptqa.selenium1019.base.BaseTestCase;
+import com.oracle.cn.ptqa.selenium1019.pageobject.LoginPage;
+
+public class PersonalInfoTest extends BaseTestCase {
+	
+	@Test
+	public void test() throws InterruptedException {
+		
+		LoginPage loginPage= new LoginPage(driver);
+		loginPage.open();
+		loginPage.inputUserName("peixuefei");
+		loginPage.inputPasswrod("123456");
+		loginPage.clickLoginButton();
+		
+		//click account setting 
+		Thread.sleep(3000);
+		driver.findElement(By.linkText("帐号设置")).click();
+		//personal info
+		//modify name
+		//modify gender
+		//modify QQ
+		
+		fail("Not yet implemented"); // TODO
+	}
+
+}

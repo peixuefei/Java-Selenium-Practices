@@ -1,0 +1,46 @@
+package com.oracle.cn.ptqa.selenium1019.pageobject;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginPage {
+	
+	WebDriver driver;
+	String url="http://localhost/index.php?m=user&c=public&a=login";
+	
+	@FindBy(id="username")
+	WebElement username_input_box;
+	
+	@FindBy(id="password")
+	WebElement password_input_box;
+	
+	@FindBy(className="login_btn")
+	WebElement login_btn;
+
+	public void inputUserName(String username){
+		
+		username_input_box.sendKeys(username);
+	}
+	
+	public void inputPasswrod(String password){
+		
+		password_input_box.sendKeys(password);
+	}
+	
+	public void clickLoginButton() {
+		login_btn.click();
+	}
+	
+	public void open() {
+		driver.get(url);
+	}
+	
+	public LoginPage(WebDriver driver) {
+		this.driver=driver;
+		
+		//Initialize all elements in this page
+		PageFactory.initElements(driver, this);
+	}
+}

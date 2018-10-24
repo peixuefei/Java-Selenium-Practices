@@ -1,0 +1,39 @@
+package org.openqa.selenium.example;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class Day3Test {
+
+	private final Day3 C_TEST = new Day3();
+	
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+	}
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void testSum() throws Exception{
+//		fail("Testing fails..."); // TODO
+		assertEquals(C_TEST.sum(1, 2), 3);
+		assertEquals(C_TEST.sum(1, 1), 2);
+	}
+
+	@Test
+	public void testSub() {
+//		fail("Not yet implemented"); // TODO
+		assertEquals(C_TEST.sub(1, 2), -1);
+	}
+
+}

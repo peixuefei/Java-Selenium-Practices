@@ -1,0 +1,21 @@
+package com.oracle.cn.ptqa.selenium1019.testcase;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Open browser
+		WebDriver driver = new ChromeDriver();
+				
+		//Open website
+		driver.get("http://localhost:80/");
+		//Input user id
+		//Input password
+		//Click login button
+
+	}
+
+}

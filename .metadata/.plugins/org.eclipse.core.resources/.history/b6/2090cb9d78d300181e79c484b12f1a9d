@@ -1,0 +1,5 @@
+package com.oracle.cn.ptqa.selenium1019.util;
+
+public class WebDriverManager {
+
+}

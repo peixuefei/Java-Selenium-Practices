@@ -1,0 +1,12 @@
+package com.oracle.cn.ptqa.selenium1019.pageobject;
+
+import org.openqa.selenium.WebElement;
+
+public class LoginPage {
+	
+	
+	WebElement username_input_box;
+	WebElement password_input_box;
+	WebElement login_btn;
+	
+}

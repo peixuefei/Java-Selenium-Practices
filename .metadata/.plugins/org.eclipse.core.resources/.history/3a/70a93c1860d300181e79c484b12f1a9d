@@ -1,0 +1,17 @@
+package com.oracle.cn.ptqa.selenium1019.pageobject;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class LoginPage {
+	
+	@FindBy(id="username");
+	WebElement username_input_box;
+	
+	@FindBy(id="password");
+	WebElement password_input_box;
+	
+	@FindBy(id="login_btn");
+	WebElement login_btn;
+	
+}

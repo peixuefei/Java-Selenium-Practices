@@ -1,0 +1,25 @@
+package com.oracle.cn.ptqa.selenium1019.base;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BaseTestCase {
+	
+	public static WebDriver driver;
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		
+		driver = new ChromeDriver();
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		
+		driver.quit();
+	}
+
+
+}

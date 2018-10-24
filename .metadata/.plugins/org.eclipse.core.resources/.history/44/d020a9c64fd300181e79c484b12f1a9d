@@ -1,0 +1,17 @@
+package com.oracle.cn.ptqa.selenium1019.testcase;
+
+public class LoginTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Open browser
+		WebDriver driver = new ChromeDriver();
+				
+		//Open website
+		//Input user id
+		//Input password
+		//Click login button
+
+	}
+
+}
