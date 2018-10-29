@@ -1,0 +1,7 @@
+2018-10-29 14:17:37.422 INFO  org.changcheng.selenium1019.pageobject.PersonalInfoPage2 - 正在点击页面元素： [link text: 账号设置]
+2018-10-29 14:17:39.252 INFO  org.changcheng.selenium1019.pageobject.PersonalInfoPage2 - 正在点击页面元素： [link text: 个人资料]
+2018-10-29 14:17:40.966 INFO  org.changcheng.selenium1019.pageobject.PersonalInfoPage2 - 向页面元素[id: true_name]输入: 常城
+2018-10-29 14:17:41.323 INFO  org.changcheng.selenium1019.pageobject.PersonalInfoPage2 - 正在点击页面元素： [id: xb]
+2018-10-29 14:17:41.434 INFO  org.changcheng.selenium1019.pageobject.PersonalInfoPage2 - 向页面元素[id: date]输入: 1990-12-12
+2018-10-29 14:17:41.593 INFO  org.changcheng.selenium1019.pageobject.PersonalInfoPage2 - 向页面元素[id: qq]输入: 23432546
+2018-10-29 14:17:41.827 INFO  org.changcheng.selenium1019.pageobject.PersonalInfoPage2 - 正在点击页面元素： [class name: btn4]
